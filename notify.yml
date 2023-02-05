@@ -1,0 +1,19 @@
+---
+- name: This is handler
+  hosts: all
+
+  tasks:
+  - name: Install httpd package
+    yum:
+      name: httpd
+      state: present
+
+    notify: Start httpd service
+  handlers:
+  - name: Start httpd service
+    service:
+      name: httpd
+      state: started
+
+      
+    

@@ -1,0 +1,9 @@
+---
+- name: create a file under /home/kmoort958
+  hosts: all
+
+  tasks:
+  - name: File named inventory
+    file:
+      path: /home/kmoort958/inventory
+      state: absent

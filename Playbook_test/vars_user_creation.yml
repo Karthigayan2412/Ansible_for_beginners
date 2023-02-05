@@ -1,0 +1,10 @@
+---
+- name: Test the skill to create user through vars
+  hosts: all
+  vars:
+    user: Inglis
+
+  tasks:
+  - name: Creating the user from variable
+    user: 
+      name: "{{ user }}"

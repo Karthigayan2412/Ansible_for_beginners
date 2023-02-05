@@ -1,0 +1,10 @@
+---
+- name: Installing multiple packages
+  hosts: all
+
+  tasks:
+  - name: Installing packages which has recommended kernel version
+    yum:
+      name: ['telnet', 'httpd']
+      state: absent
+    when: ansible_kernel == '3.10.0-1127.el7.x86_64'

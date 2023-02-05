@@ -1,0 +1,12 @@
+---
+- name: Ansible vault
+  hosts: all
+  gather_facts: false
+  vars_files:
+    - password.yml
+  
+  tasks:
+  - name: clone the repo using git
+    git:
+      repo: https://karthigayan2412:{{ password }}@github.com/Karthigayan2412/ansible-vault.git
+      dest: /opt/git

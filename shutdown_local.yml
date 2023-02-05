@@ -1,0 +1,7 @@
+---
+- name: Shutting down the ansible Master node - This is test VM
+  hosts: all
+ 
+  tasks:
+  - name: shutdown the local host
+    shell: shutdown -h now

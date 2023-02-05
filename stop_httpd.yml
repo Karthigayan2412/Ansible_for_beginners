@@ -1,0 +1,10 @@
+---
+- name: Stop the httpd on kernel
+  hosts: all
+
+  tasks:
+  - name: Stop the httpd service
+    service:
+      name: httpd
+      state: stopped
+    when: ansible_kernel == '3.10.0-1160.71.1.el7.x86_64'

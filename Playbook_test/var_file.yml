@@ -1,0 +1,9 @@
+---
+- name: Create user from the file
+  hosts: all
+  vars_files:
+    - user.yml
+  tasks: 
+  - name: Creatint user
+    user:
+      name: "{{ user }}"

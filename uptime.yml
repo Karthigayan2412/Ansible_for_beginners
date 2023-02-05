@@ -1,0 +1,6 @@
+---
+- name: uptime of all the hosts
+  hosts: all
+  
+  tasks:
+  - shell: "uptime"

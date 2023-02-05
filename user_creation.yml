@@ -1,0 +1,8 @@
+---
+- name: This playbook create users.
+  hosts: all
+  gather_facts: false
+  
+  tasks:
+  - name: Creating User 
+    user: name=centos

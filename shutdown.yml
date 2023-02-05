@@ -1,0 +1,7 @@
+---
+- name: Shutdown the Managed servers
+  hosts: all
+  
+  tasks:
+  - name: Shutting down the server
+    shell: shutdown -h now

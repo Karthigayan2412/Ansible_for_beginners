@@ -1,0 +1,9 @@
+---
+- name: Install the httpd packages
+  hosts: all
+
+  tasks:
+  - name: Install the package
+    yum:
+      name: git
+      state: present

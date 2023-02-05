@@ -1,0 +1,16 @@
+---
+- name: Using when condition
+  hosts: all
+
+  tasks:
+  - name: Installing the curl package
+    yum:
+      name: curl
+      state: present
+    when: ansible_kernel == '3.10.0-1160.71.1.el7.x86_64'
+
+  - name: Installing the telnet package
+    yum:
+      name: telnet
+      state: present
+    when: ansible_kernel == '3.10.0-1127.el7.x86_64'
